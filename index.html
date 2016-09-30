@@ -8,6 +8,9 @@
 	<meta name="description" content="Stroop effect game"> -->
 	<!-- <link rel="icon" href="favicon.ico"> -->
 	<!-- <link href="css/common.min.css" rel="stylesheet"> -->
+<!-- 	<link rel="stylesheet" href="/c/default.min.css">
+	<link rel="stylesheet" href="/c/advanced.min.css" media="only screen"> -->
+
 
 	<!-- May the Force be with you -->
 	<!--[if lt IE 9]>
@@ -21,8 +24,8 @@
 <body>
 	<!-- ARIA role banner: contains mostly site-oriented content (vs page-specific content) -->
 	<header role="banner">
-		<h1>The Stroop Effect</h1>
-		<h2>Confusing people since 1929</h2>
+		<h1 class="sans-serif">The Stroop Effect</h1>
+		<h2 class="serif">confounding people since 1929</h2>
 		<!-- ARIA label exposes purpose of element to users using screen readers. -->
 		<nav aria-label="Main Navigation">
 			<ul>
@@ -37,7 +40,12 @@
 	</header>
 
 	<main>
-		primary content
+		<section>
+				<h2>Wondering what the <em>Stroop effect</em> is?</h2>
+				<p>You've come to the right place! The Stroop effect is best experienced first, then explained later.</p>
+				<p>To experience the Stroop effect, you'll be asked 3 sets of questions. (They're short! You'll be done in less than 10 minutes.) Each question has only 2 choices: UP and DOWN.  You can answer by pressing the corresponding button on the screen or using the up and down arrow keys on your keyboard. Ready? <a href="qset1">Let's go!</a></p>
+
+		</section>
 	</main>
 
 	<footer>
@@ -51,11 +59,122 @@
 	<h3 id="answer"></h3>
 	<p id="verdict"></p>
 
-	<style type="text/css">
+<!-- 	<style type="text/css">
 		#word {
 			text-transform: uppercase;
 		}
-	</style>
+		.serif {
+			font-family: Georgia, Times, "Times New Roman", serif;
+		}
+		.sans-serif {
+			font-family: "Segoe UI", Frutiger, "Frutiger Linotype",
+             "Dejavu Sans", "Helvetica Neue", Arial,
+             sans-serif;
+         }
+        body {
+         	/*background: #212;
+         	color: #DDD;*/
+        }
+        header {
+        	width: 100%;
+         	background: #212;
+         	color: #DDD;
+         	padding: 0 1em;
+        }
+        main {
+         	padding: 0 1em;
+        }
+        a {
+         	color: #F80;
+         	text-decoration: none;
+         	border-bottom: 1px dotted;
+         	border-bottom-color: rgba(255, 136, 0, 0.8);
+        }
+        a:hover, a:visited {
+         	color: #DDD;
+         	border-bottom-color: #DDD;
+        }
+
+        .qbox {
+        	width: 80%;
+        	margin: auto;
+        	padding: 0px;
+        	text-align: center;
+        	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+        	font-size: 18pt;
+        	font-weight: 700;
+        	border: 6px solid #000;
+        }
+
+        .qbox-box {
+        	height: 100px;
+        	line-height: 100px;
+        }
+
+        .qbox-middle {
+        	border-top: 6px dashed #000;
+        	border-bottom: 6px dashed #000;
+        	height: 0px;
+        	overflow: hidden;
+        }
+
+        .question {
+        	text-align: center;
+        }
+        
+
+        @media (min-width: 40em) {
+         	header {
+         		padding: 0 2rem;
+         	}
+         	main {
+         		padding: 0 2rem;
+         	}
+         	.qbox {
+         		width: 60%;
+         		font-size: 300%;
+         		border-width: 12px;
+         	}
+         	.qbox-box {
+         		height: 100px;
+         		line-height: 100px;
+         	}
+         	.qbox-middle {
+         		height: 0px;
+         		border-top: 12px dashed #000;
+         		border-bottom: 12px dashed #000;
+         	}
+        }
+
+        @media (min-width: 60em) {
+         	header {
+         		padding: 0 2rem;
+         	}
+         	main {
+         		padding: 0 2rem;
+         	}
+         	.qbox {
+         		width: 40%;
+         		font-size: 300%;
+         		border-width: 12px;
+         	}
+         	.qbox-box {
+         		height: 150px;
+         		line-height: 150px;
+         	}
+         	.qbox-middle {
+         		height: 0px;
+         		border-top: 12px dashed #000;
+         		border-bottom: 12px dashed #000;
+         	}
+        }
+
+        @media (-ms-high-contrast: active) {
+		/* rule sets for high contrast mode */
+        }
+
+
+	</style> -->
 
 	<script type="text/javascript">
 
