@@ -42,7 +42,6 @@
 	<main>
 		<section>
 			
-			<article>
 				<h2>The Stroop Experience: Part 1</h2>
 				<p>For each of the following 12 questions, you will see a word either above or below the dashed line.  Your job is to choose the answer that best reflects the <em>meaning</em> or <em>definition</em> of the word.  For example, for this question:</p>
 			
@@ -58,10 +57,11 @@
 				</div>
 			</div>
 
-				<p>the best answer is UP because <em>top</em> is closer in meaning to <em>up</em> than it is to <em>down</em>.  Remember: you're answering based on the <em>meaning</em> of the word, not its location.</p> 
+				<p>the best answer is UP because <em>top</em> is closer in meaning to <em>up</em> than it is to <em>down</em>.  Remember: you're answering based on the <em>meaning</em> of the word, not its location.</p>
+				<button id="start-button" onclick="play()">START</button>
 
-			</article>
 
+			<div class="question-box" id="question-box-1">
 			<p class="question">Question 1</p>
 			<div class="qbox">
 				<div class="qbox-box" id="q-top">
@@ -74,6 +74,10 @@
 					
 				</div>
 			</div>
+				<button id="start-button" onclick="play('next')">NEXT</button>
+			</div>
+
+			<div class="question-box" id="question-box-2">
 			<p class="question">Question 2</p>
 			<div class="qbox">
 				<div class="qbox-box" id="q-top">
@@ -86,6 +90,10 @@
 					
 				</div>
 			</div>
+				<button id="start-button" onclick="play('next')">NEXT</button>
+			</div>
+
+			<div class="question-box" id="question-box-3">
 			<p class="question">Question 3</p>
 			<div class="qbox">
 				<div class="qbox-box" id="q-top">
@@ -98,6 +106,10 @@
 					BELOW
 				</div>
 			</div>
+				<button id="start-button" onclick="play('next')">NEXT</button>
+			</div>
+
+			<div class="question-box" id="question-box-4">
 			<p class="question">Question 4</p>
 			<div class="qbox">
 				<div class="qbox-box" id="q-top">
@@ -110,6 +122,10 @@
 					
 				</div>
 			</div>
+				<button id="start-button" onclick="play('next')">NEXT</button>
+			</div>
+
+			<div class="question-box" id="question-box-5">
 			<p class="question">Question 5</p>
 			<div class="qbox">
 				<div class="qbox-box" id="q-top">
@@ -122,6 +138,10 @@
 					TOP
 				</div>
 			</div>
+				<button id="start-button" onclick="play('next')">NEXT</button>
+			</div>
+
+			<div class="question-box" id="question-box-6">
 			<p class="question">Question 6</p>
 			<div class="qbox">
 				<div class="qbox-box" id="q-top">
@@ -134,6 +154,10 @@
 					
 				</div>
 			</div>
+				<button id="start-button" onclick="play('next')">NEXT</button>
+			</div>
+
+			<div class="question-box" id="question-box-7">
 			<p class="question">Question 7</p>
 			<div class="qbox">
 				<div class="qbox-box" id="q-top">
@@ -146,6 +170,10 @@
 					UP
 				</div>
 			</div>
+				<button id="start-button" onclick="play('next')">NEXT</button>
+			</div>
+
+			<div class="question-box" id="question-box-8">
 			<p class="question">Question 8</p>
 			<div class="qbox">
 				<div class="qbox-box" id="q-top">
@@ -158,6 +186,10 @@
 					
 				</div>
 			</div>
+				<button id="start-button" onclick="play('next')">NEXT</button>
+			</div>
+
+			<div class="question-box" id="question-box-9">
 			<p class="question">Question 9</p>
 			<div class="qbox">
 				<div class="qbox-box" id="q-top">
@@ -170,6 +202,10 @@
 					ABOVE
 				</div>
 			</div>
+				<button id="start-button" onclick="play('next')">NEXT</button>
+			</div>
+
+			<div class="question-box" id="question-box-10">
 			<p class="question">Question 10</p>
 			<div class="qbox">
 				<div class="qbox-box" id="q-top">
@@ -182,6 +218,10 @@
 					DOWN
 				</div>
 			</div>
+				<button id="start-button" onclick="play('next')">NEXT</button>
+			</div>
+			
+			<div class="question-box" id="question-box-11">
 			<p class="question">Question 11</p>
 			<div class="qbox">
 				<div class="qbox-box" id="q-top">
@@ -194,6 +234,10 @@
 					BOTTOM
 				</div>
 			</div>
+				<button id="start-button" onclick="play('next')">NEXT</button>
+			</div>
+
+			<div class="question-box" id="question-box-12">
 			<p class="question">Question 12</p>
 			<div class="qbox">
 				<div class="qbox-box" id="q-top">
@@ -206,12 +250,15 @@
 					
 				</div>
 			</div>
+				<button id="start-button" onclick="play('set1-closer')">DONE</button>
+			</div>
 			
 
 		</section>
 
-		<section>
-			<p>That wasn't so bad, right? <a href="qset2">Now onto the next set</a>!</p>
+		<section id="set1-closer">
+			<p>That wasn't so bad, right?</p>
+			<p><a href="qset2">Now onto the next set!</a></p>
 		</section>
 	</main>
 
@@ -219,12 +266,6 @@
 		Made with perseverance and patience for the <a href="https://a-k-apart.com">10k Apart Challenge</a>.
 	</footer>
 
-	<p>Score: <span id="score">0</span></p>
-	<h1 id="word"></h1>
-	<input type="button" value="true" name="" onclick="checkAnswer(this)">
-	<input type="button" value="false" name="" onclick="checkAnswer(this)">
-	<h3 id="answer"></h3>
-	<p id="verdict"></p>
 
 	<style type="text/css">
 		
@@ -248,7 +289,6 @@
         	text-align: center;
         	font-family: "Helvetica Neue", Helvetica, "Trebuchet MS", Arial, sans-serif;
         	font-size: 0.75em;
-        	position: absolute;
         	right: 0;
         	left: 0;
         	bottom: 0;
@@ -299,8 +339,21 @@
         	font-size: 2rem;
         	padding-left: 0.75rem;
         }
+        #start-button {
+        	width: 10rem;
+        	height: 3rem;
+        	font-size: 2rem;
+        	font-weight: 700;
+        	background: #F80;
+        	color: #212;
+        	text-align: center;
+        	margin: auto;
+        }
 
-
+        .question-box {
+        	visibility: hidden;
+        	margin: 10rem 0 10rem 0;
+        }
         .qbox {
         	width: 80%;
         	margin: auto;
@@ -310,6 +363,8 @@
         	font-size: 18pt;
         	font-weight: 700;
         	border: 6px solid #000;
+         	background: #FFF;
+         	color: #000;        	
         }
 
         .qbox-box {
@@ -325,6 +380,13 @@
         }
 
         .question {
+        	text-align: center;
+        	padding-top: 10rem;
+        }
+
+        #set1-closer, #set2-closer, #set3-closer {
+        	visibility: hidden;
+        	margin: 20rem 0 40rem 0;
         	text-align: center;
         }
 
@@ -385,22 +447,30 @@
 	</style>
 
 	<script type="text/javascript">
+		var i;
 
-		var answer = play();
-		var score = 0;
+		function play(str) {
+			if (!str) {
+				i = 1;
+			}
+			if (i < 13) {
+				let qid = "question-box-" + i;
+				console.log(qid)
+				document.getElementById(qid).style.visibility = "visible";
+				window.location.hash = qid;
+				i++;
+			}
+			else {
+				document.getElementById(str).style.visibility = "visible";
+				window.location.hash = str;
+			}
+			
+			// document.getElementById("question-box").innerHTML = word;
+			// document.getElementById("word").style.color = color;
 
-		function play() {
-			let values = ["red", "yellow", "green", "blue"];
+			// let answer = (word.toLowerCase() === color) ? "true" : "false";
 
-			let word = values[getRandomInt(0, 3)];
-			let color = values[getRandomInt(0, 3)];
-
-			document.getElementById("word").innerHTML = word;
-			document.getElementById("word").style.color = color;
-
-			let answer = (word.toLowerCase() === color) ? "true" : "false";
-
-			return answer;
+			// return answer;
 
 		}
 
